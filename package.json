@@ -1,0 +1,19 @@
+{
+  "name": "node-scaffold",
+  "version": "1.0.0",
+  "description": "node.js项目脚手架 ## 2018年2月七日",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cq5282000/node-scaffold.git"
+  },
+  "author": "chenqu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cq5282000/node-scaffold/issues"
+  },
+  "homepage": "https://github.com/cq5282000/node-scaffold#readme"
+}
