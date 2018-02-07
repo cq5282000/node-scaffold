@@ -7,7 +7,7 @@ node.js项目脚手架
 - 安装node和npm，并且确定node和npm能正常运行
 
 ```bash
-node -v
+$ node -v
 ```
 查看当前安装的node版本
 
@@ -16,13 +16,21 @@ node -v
 - JS执行
 
 ```bash
-node hello.js
+$ node hello.js
 ```
 
 以node环境执行hello.js，也可以直接执行
 
 ```bash
-node
+$ node
 ```
 可以直接执行JS语句
+
+- nodeJS支持CommonJS规范的模块加载机制, module.export, require.
+
+nodeJS支持es6的语法规范，后期会使用插件用import，export取代CommonJS的加载机制。
+
+- javascript中有且仅有一个全局对象，叫window，但在node.js中，唯一的全局对象叫global。
+
+通过node指令进入node环境，输入global可以查看global所包含的对象和工具，
 
