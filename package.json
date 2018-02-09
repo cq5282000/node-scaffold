@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cq5282000/node-scaffold/issues"
   },
-  "homepage": "https://github.com/cq5282000/node-scaffold#readme"
+  "homepage": "https://github.com/cq5282000/node-scaffold#readme",
+  "dependencies": {
+    "koa": "next"
+  }
 }
