@@ -28,7 +28,7 @@ $ node
 
 - nodeJS支持CommonJS规范的模块加载机制, module.export, require.
 
-nodeJS支持es6的语法规范，后期会使用插件用import，export取代CommonJS的加载机制。
+nodeJS支持es6的语法规范,但是不支持，import，export，这个体验非常不好，后期会使用插件用import，export取代CommonJS的加载机制。
 
 - javascript中有且仅有一个全局对象，叫window，但在node.js中，唯一的全局对象叫global。
 
