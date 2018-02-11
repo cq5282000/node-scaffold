@@ -80,3 +80,8 @@ yarn add koa@next
 2. 模块依赖方式：通过webpack这样的打包工具，可以保证前端和后台均适用CommonJS的依赖方式，确保代码相互依赖。
 
 ### 最重要的一点，应用别人的观点，上游才是主导，底层才是主导，比如Google支持spa的seo的话，我们同构与否其实并没有多大影响，然后硬件才是终结者。随便一个升级，所有考虑都是多余的。
+
+## react虚拟DOM，以对象树的形式保存在内存中，，并在前后端有两种展露原型的形式
+
+- 客户端上，虚拟DOM通过ReactDOM的Render方法渲染到页面中。
+- 服务端上，react提供的另外两个方法：ReactDOMServer.renderToString和ReactDOMServer.renderToStaticMarkup可将其渲染为字符串。
