@@ -85,3 +85,45 @@ yarn add koa@next
 
 - 客户端上，虚拟DOM通过ReactDOM的Render方法渲染到页面中。
 - 服务端上，react提供的另外两个方法：ReactDOMServer.renderToString和ReactDOMServer.renderToStaticMarkup可将其渲染为字符串。
+- 在服务端上component生命周期只会到componentWillMount.
+- 同构时，服务端结合数据将component渲染成完整的HTML字符串并将数据状态返回给客户端，客户端判断是都可以直接使用或需要重新挂载；
+- 同构的项目，当前后端需要使用同一段代码的时候，像前端特有的window对象，ajax请求在后端是无法使用的。需要根据平台进行代码适配
+
+解决方案：
+1. 使用前后端通用模块，如isomorphic-fetch
+2. 前后端通过webpack配置resolve.alias对应不同文件；
+例如客户端：
+
+```javascript
+resolve: {
+    alias: {
+        'request': path.join(pathConfig.src, '/browser/request'),
+    }
+}
+```
+服务器端：
+
+```javascript
+resolve: {
+    alias: {
+        'request': path.join(pathConfig.src, '/server/request'),
+    }
+}
+```
+
+3. 定义一个平台全局变量，然后在JS代码逻辑中根据这个全局变量去适配
+
+```javascript
+new webpack.DefinePlugin({
+    "__ISOMORPHIC__": true
+}),
+```
+在JS代码逻辑上做判断
+
+```javascript
+if(__ISOMORPHIC__){
+    // do server thing
+} else {
+    // do browser thing
+}
+```
