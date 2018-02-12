@@ -135,16 +135,32 @@ if(__ISOMORPHIC__){
 客户端请求----》后端渲染好HTML字符串-----》客户端接受html字符串渲染静态界面-------》客户端下载reactJS----》客户端执行reactJS-----》界面变成可交互
 
 客户端渲染的概念是：
- 
+
 客户端请求----》服务端响应---》客户端下载reactJS----》客户端执行react-------》前端显示出可交互的界面
 
 - redux
 
 - webpack做语法兼容
 
+```javascript
+require("babel-register")({
+    extensions: [".jsx"],
+    presets: ['react']
+});
+require("babel-polyfill");
+```
+
 - UglifyJsPlugin慎用
 
 - 纠正_filename和_dirname的值
+当服务端代码需要使用到 __dirname 时，需在 webpack.config.js 配置 target 为 node，并在 node 中声明__filename和__dirname为true，否则拿不到准确值
+```javascript
+target: 'node', 
+node: {
+    __filename: true,
+    __dirname: true
+}
+```
 
 - react-router
 webpack 现在是不支持在 server 上使用 webpack.ensure 的,所以react-router的require.ensure的按需加载服务器端渲染的时候不能用。
