@@ -85,7 +85,7 @@ yarn add koa@next
 
 - 客户端上，虚拟DOM通过ReactDOM的Render方法渲染到页面中。
 - 服务端上，react提供的另外两个方法：ReactDOMServer.renderToString和ReactDOMServer.renderToStaticMarkup可将其渲染为字符串。
-- 在服务端上component生命周期只会到componentWillMount.
+- 在服务端上component生命周期只会到componentWillMount,其余的生命周期会在客户端继续执行。
 - 同构时，服务端结合数据将component渲染成完整的HTML字符串并将数据状态返回给客户端，客户端判断是都可以直接使用或需要重新挂载；
 - 同构的项目，当前后端需要使用同一段代码的时候，像前端特有的window对象，ajax请求在后端是无法使用的。需要根据平台进行代码适配
 
