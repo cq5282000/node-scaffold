@@ -127,3 +127,24 @@ if(__ISOMORPHIC__){
     // do browser thing
 }
 ```
+
+### 2018年2月12日
+
+
+- redux
+
+- webpack做语法兼容
+
+- UglifyJsPlugin慎用
+
+- 纠正_filename和_dirname的值
+
+- react-router
+webpack 现在是不支持在 server 上使用 webpack.ensure 的,所以react-router的require.ensure的按需加载服务器端渲染的时候不能用。
+所以同构项目中，server端全加载，client按需加在。
+
+在群里一讨论，又是一堆疑问。
+记录下未解决的问题：
+Q1: react端渲染的生命周期到componentWillMount,假如我写了componentDidMount，客户端显示界面以后，componentDidMount会在客户端继续执行吗？？
+
+Q2: 对于引入react-router的服务端渲染的SPA，页面切换的时候，是不是会重新发起HTTP请求，还是本地记载的？？？？？
