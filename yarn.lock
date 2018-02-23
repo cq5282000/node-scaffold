@@ -13,6 +13,19 @@ any-promise@^1.1.0:
   version "1.3.0"
   resolved "http://r.npm.sankuai.com/any-promise/download/any-promise-1.3.0.tgz#abc6afeedcea52e809cdc0376aed3ce39635d17f"
 
+bytes@3.0.0:
+  version "3.0.0"
+  resolved "http://r.npm.sankuai.com/bytes/download/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
+
+co-body@^5.1.0:
+  version "5.1.1"
+  resolved "http://r.npm.sankuai.com/co-body/download/co-body-5.1.1.tgz#d97781d1e3344ba4a820fd1806bddf8341505236"
+  dependencies:
+    inflation "^2.0.0"
+    qs "^6.4.0"
+    raw-body "^2.2.0"
+    type-is "^1.6.14"
+
 co@^4.6.0:
   version "4.6.0"
   resolved "http://r.npm.sankuai.com/co/download/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -32,7 +45,11 @@ cookies@~0.6.1:
     depd "~1.1.0"
     keygrip "~1.0.1"
 
-debug@*:
+copy-to@^2.0.1:
+  version "2.0.1"
+  resolved "http://r.npm.sankuai.com/copy-to/download/copy-to-2.0.1.tgz#2680fbb8068a48d08656b6098092bdafc906f4a5"
+
+debug@*, debug@^3.1.0:
   version "3.1.0"
   resolved "http://r.npm.sankuai.com/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   dependencies:
@@ -81,7 +98,7 @@ http-assert@^1.1.0:
     deep-equal "~1.0.1"
     http-errors "~1.6.1"
 
-http-errors@^1.2.8, http-errors@~1.6.1:
+http-errors@1.6.2, http-errors@^1.2.8, http-errors@^1.3.1, http-errors@~1.6.1:
   version "1.6.2"
   resolved "http://r.npm.sankuai.com/http-errors/download/http-errors-1.6.2.tgz#0a002cc85707192a7e7946ceedc11155f60ec736"
   dependencies:
@@ -89,6 +106,14 @@ http-errors@^1.2.8, http-errors@~1.6.1:
     inherits "2.0.3"
     setprototypeof "1.0.3"
     statuses ">= 1.3.1 < 2"
+
+iconv-lite@0.4.19:
+  version "0.4.19"
+  resolved "http://r.npm.sankuai.com/iconv-lite/download/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
+
+inflation@^2.0.0:
+  version "2.0.0"
+  resolved "http://r.npm.sankuai.com/inflation/download/inflation-2.0.0.tgz#8b417e47c28f925a45133d914ca1fd389107f30f"
 
 inherits@2.0.3:
   version "2.0.3"
@@ -98,9 +123,20 @@ is-generator-function@^1.0.3:
   version "1.0.7"
   resolved "http://r.npm.sankuai.com/is-generator-function/download/is-generator-function-1.0.7.tgz#d2132e529bb0000a7f80794d4bdf5cd5e5813522"
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "http://r.npm.sankuai.com/isarray/download/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+
 keygrip@~1.0.1:
   version "1.0.2"
   resolved "http://r.npm.sankuai.com/keygrip/download/keygrip-1.0.2.tgz#ad3297c557069dea8bcfe7a4fa491b75c5ddeb91"
+
+koa-bodyparser@^4.2.0:
+  version "4.2.0"
+  resolved "http://r.npm.sankuai.com/koa-bodyparser/download/koa-bodyparser-4.2.0.tgz#bce6e08bc65f8709b6d1faa9411c7f0d8938aa54"
+  dependencies:
+    co-body "^5.1.0"
+    copy-to "^2.0.1"
 
 koa-compose@^3.0.0:
   version "3.2.1"
@@ -118,6 +154,17 @@ koa-convert@^1.2.0:
 koa-is-json@^1.0.0:
   version "1.0.0"
   resolved "http://r.npm.sankuai.com/koa-is-json/download/koa-is-json-1.0.0.tgz#273c07edcdcb8df6a2c1ab7d59ee76491451ec14"
+
+koa-router@^7.4.0:
+  version "7.4.0"
+  resolved "http://r.npm.sankuai.com/koa-router/download/koa-router-7.4.0.tgz#aee1f7adc02d5cb31d7d67465c9eacc825e8c5e0"
+  dependencies:
+    debug "^3.1.0"
+    http-errors "^1.3.1"
+    koa-compose "^3.0.0"
+    methods "^1.0.1"
+    path-to-regexp "^1.1.1"
+    urijs "^1.19.0"
 
 koa@next:
   version "2.0.0-alpha.8"
@@ -152,6 +199,10 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "http://r.npm.sankuai.com/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
+methods@^1.0.1:
+  version "1.1.2"
+  resolved "http://r.npm.sankuai.com/methods/download/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
+
 mime-db@~1.30.0:
   version "1.30.0"
   resolved "http://r.npm.sankuai.com/mime-db/download/mime-db-1.30.0.tgz#74c643da2dd9d6a45399963465b26d5ca7d71f01"
@@ -184,6 +235,25 @@ parseurl@^1.3.0:
   version "1.3.2"
   resolved "http://r.npm.sankuai.com/parseurl/download/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
 
+path-to-regexp@^1.1.1:
+  version "1.7.0"
+  resolved "http://r.npm.sankuai.com/path-to-regexp/download/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
+  dependencies:
+    isarray "0.0.1"
+
+qs@^6.4.0:
+  version "6.5.1"
+  resolved "http://r.npm.sankuai.com/qs/download/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
+
+raw-body@^2.2.0:
+  version "2.3.2"
+  resolved "http://r.npm.sankuai.com/raw-body/download/raw-body-2.3.2.tgz#bcd60c77d3eb93cde0050295c3f379389bc88f89"
+  dependencies:
+    bytes "3.0.0"
+    http-errors "1.6.2"
+    iconv-lite "0.4.19"
+    unpipe "1.0.0"
+
 setprototypeof@1.0.3:
   version "1.0.3"
   resolved "http://r.npm.sankuai.com/setprototypeof/download/setprototypeof-1.0.3.tgz#66567e37043eeb4f04d91bd658c0cbefb55b8e04"
@@ -192,12 +262,20 @@ setprototypeof@1.0.3:
   version "1.4.0"
   resolved "http://r.npm.sankuai.com/statuses/download/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
 
-type-is@^1.5.5:
+type-is@^1.5.5, type-is@^1.6.14:
   version "1.6.15"
   resolved "http://r.npm.sankuai.com/type-is/download/type-is-1.6.15.tgz#cab10fb4909e441c82842eafe1ad646c81804410"
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.15"
+
+unpipe@1.0.0:
+  version "1.0.0"
+  resolved "http://r.npm.sankuai.com/unpipe/download/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
+
+urijs@^1.19.0:
+  version "1.19.1"
+  resolved "http://r.npm.sankuai.com/urijs/download/urijs-1.19.1.tgz#5b0ff530c0cbde8386f6342235ba5ca6e995d25a"
 
 vary@^1.0.0:
   version "1.1.2"

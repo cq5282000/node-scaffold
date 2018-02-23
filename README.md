@@ -171,3 +171,17 @@ webpack 现在是不支持在 server 上使用 webpack.ensure 的,所以react-ro
 Q1: react端渲染的生命周期到componentWillMount,假如我写了componentDidMount，客户端显示界面以后，componentDidMount会在客户端继续执行吗？？
 
 Q2: 对于引入react-router的服务端渲染的SPA，页面切换的时候，是不是会重新发起HTTP请求，还是本地记载的？？？？？
+
+### 2018年2月13日
+
+基本问题想清楚以后，今天继续项目的搭建。
+
+- koa-router, 处理URL
+
+- koa-bodyparser, 因为无论是原始的nodeJS的request对象还是koa提供的request对象，对不提供解析request的body的功能，所以我们需要引入koa-bodyparser来进行解析。koa-bodyparser必须在router之前注册到app对象上；
+
+#### 结构设计
+
+- 所有的接口处理函数统一放置在controller文件夹下，开发的时候每个接口处理文件单独建一个新的js文件，统一输出；
+
+

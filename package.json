@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/cq5282000/node-scaffold#readme",
   "dependencies": {
-    "koa": "next"
+    "koa": "next",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0"
   }
 }
