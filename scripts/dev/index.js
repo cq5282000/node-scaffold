@@ -2,7 +2,7 @@
  * @Author: chenqu 
  * @Date: 2018-02-08 13:25:43 
  * @Last Modified by: chenqu
- * @Last Modified time: 2018-02-24 12:09:29
+ * @Last Modified time: 2018-02-24 12:39:00
  */
 // 倒入koa的类
 const Koa = require('koa');
@@ -13,12 +13,10 @@ const bodyparser = require('koa-bodyparser');
 app.use(bodyparser());
 
 // 引入controllers
-
-
 app.use(async (ctx, next) => {
     await next();
 });
-const router = require(`${__dirname}/controllers/index.js`)();
+const router = require(`${process.cwd()}/controllers/index.js`)();
 app.use(router);
 
 app.listen(3000);

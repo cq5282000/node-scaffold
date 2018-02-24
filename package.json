@@ -4,6 +4,7 @@
   "description": "node.js项目脚手架 ## 2018年2月七日",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development node ./scripts/dev.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,8 @@
     "koa": "next",
     "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3"
   }
 }
