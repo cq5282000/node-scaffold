@@ -1,9 +1,9 @@
-const fs_index = (ctx, next) => {
+const fs_index = async(ctx, next) => {
     const name = ctx.params.name;
     ctx.response.body = `<h1>hello  ${name}</h1>`;
 };
 
-module.export = {
+module.exports = {
     method: 'get',
     callback: fs_index,
     url: '/',
