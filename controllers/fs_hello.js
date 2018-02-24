@@ -4,7 +4,7 @@ const fs_hello = async(ctx, next) => {
 };
 
 module.exports = {
-    method: 'post',
+    method: 'get',
     callback: fs_hello,
     url: '/hello/:name',
 };

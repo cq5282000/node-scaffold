@@ -2,7 +2,7 @@
  * @Author: chenqu 
  * @Date: 2018-02-08 13:25:43 
  * @Last Modified by: chenqu
- * @Last Modified time: 2018-02-24 11:41:51
+ * @Last Modified time: 2018-02-24 12:09:29
  */
 // 倒入koa的类
 const Koa = require('koa');
@@ -19,7 +19,6 @@ app.use(async (ctx, next) => {
     await next();
 });
 const router = require(`${__dirname}/controllers/index.js`)();
-console.log(router);
 app.use(router);
 
 app.listen(3000);

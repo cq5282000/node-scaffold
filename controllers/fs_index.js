@@ -1,6 +1,6 @@
 const fs_index = async(ctx, next) => {
     const name = ctx.params.name;
-    ctx.response.body = `<h1>hello  ${name}</h1>`;
+    ctx.response.body = `<h1>hello world</h1>`;
 };
 
 module.exports = {
