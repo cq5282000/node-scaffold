@@ -20,7 +20,8 @@
   "dependencies": {
     "koa": "next",
     "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "open": "^0.0.5"
   },
   "devDependencies": {
     "cross-env": "^5.1.3"
