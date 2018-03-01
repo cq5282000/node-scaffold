@@ -214,3 +214,39 @@ yarn run dev
 说明对同一个组件服务端渲染可视的一部分，（render/componentWillMount部分代码），为确保组件有完整的生命周期及事件处理，客户端需要再次渲染，即服务端渲染也需要客户端进行再次的，但开销很小的二次渲染。
 
 ### 2018年3月1日
+
+git 了一个webpack的新姿势，webpack.config.js
+
+```javascript
+module.exports = [
+	{
+		// The configuration for the client
+		name: "browser",
+		entry: {
+			entry: ["./app/entry.js"],
+			entry2: ["./app/entry2.js"],
+        },
+		output: {
+			path: assetsPath,
+			filename: "[name].js",
+			publicPath: publicPath
+		},
+	},
+	{
+		// The configuration for the server-side rendering
+		name: "server-side rendering",
+		entry: {
+            page: ["./server/page.js"],
+            page2: ["./server/page2.js"],
+        },
+		target: "node",
+		output: {
+			path: assetsPath,
+			filename: "../../server/[name].generated.js",
+			publicPath: publicPath,
+			libraryTarget: "commonjs2"
+		},
+	}
+];
+```
+直接cli指令编译执行的话，两个配置项都会执行
