@@ -2,7 +2,7 @@
  * @Author: chenqu 
  * @Date: 2018-03-01 17:47:11 
  * @Last Modified by: chenqu
- * @Last Modified time: 2018-03-02 18:08:23
+ * @Last Modified time: 2018-03-02 19:47:08
  */
 // const React = require('react');
 
@@ -12,7 +12,13 @@
 
 import React, {Component} from 'react';
 
-export default class Test extends React.Component {
+class Test extends React.Component {
+    componentWillMount() {
+        console.log('componentWillMount');
+    }
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
     render() {
         return (
             <div>
@@ -20,4 +26,8 @@ export default class Test extends React.Component {
             </div>
         );
     }
+}
+
+export default () => {
+    return (<Test />);
 }

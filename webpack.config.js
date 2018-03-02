@@ -10,7 +10,8 @@ module.exports = [{
         path: path.resolve(__dirname, 'dist'), // __dirname指的是当前文件所在目录的根目录
         filename: '[name].js',
         publicPath: publicPathStr,
-        libraryTarget: "umd",
+        library: 'app',
+        libraryTarget: 'commonjs2',
         // publicPath: '/',
     },
     module: {
