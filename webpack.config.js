@@ -2,7 +2,7 @@ let publicPathStr = '/entry/'; // 公共路径字符串
 const path = require('path');
 module.exports = [{
     entry: {
-        app: './client/app.js'
+        app: './common/app.js'
     },
     target: "node",
     mode: 'development',

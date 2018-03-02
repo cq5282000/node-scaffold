@@ -250,3 +250,16 @@ module.exports = [
 ];
 ```
 直接cli指令编译执行的话，两个配置项都会执行
+
+### 2018年3月2日
+
+到今天为止，主要思路和项目基本已经搭建好；
+
+- 先说一下项目的结构，同构项目前后端共用代码部分放在common文件夹下，component为react组建，container下存放每个界面的入口文件，针对服务端渲染，先要对container下的入口文件babel进行转码，这里有几个点要注意： 
+1. output.libraryTarget要设置成‘commonjs2’,入口起点的返回值将使用output.library中定义的值，分配给exports对象，这个名称也意味着，模块将用于commonjs环境；
+2. 后期服务端渲染转码可能直接使用babel-cli替代webpack，更简洁；
+入口文件转码以后，在common下的路由文件里使用require引用到入口文件,然后renderToString()成HTML模版字符串，通过SSR返回给客户端，基本结构就是这样子，
+
+- 页面路由统一放在controller里面，可以根据界面新建文件，统一封装了一个index.js,读取并返回controller下面的所有路由，由koa加载
+
+- 最主要的问题是关于fetch请求的位置，在客户端渲染的时候，请求放在组件生命周期的componentDidMount里面，但是在与服务端渲染的以后，组件只会执行到componentWillMount，而不执行组建生命周期的其他阶段，但是请求还是不能放在componentWillMount，因为renderToString是同步的，而请求时异步的，如果在componentWillMount里面渲染数据以后执行setState不会出发任何刷新，所以服务端渲染的时候请求不应该放在组件的生命周期里，而应该在node端请求好数据，renderToString之前先把数据通过props传递给组件进行渲染，然后再ssR返回渲染好的组件。
