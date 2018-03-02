@@ -253,7 +253,7 @@ module.exports = [
 
 ### 2018年3月2日
 
-到今天为止，主要思路和项目基本已经搭建好；
+到今天为止，主要思路和项目基本结构已经搭建好；
 
 - 先说一下项目的结构，同构项目前后端共用代码部分放在common文件夹下，component为react组建，container下存放每个界面的入口文件，针对服务端渲染，先要对container下的入口文件babel进行转码，这里有几个点要注意： 
 1. output.libraryTarget要设置成‘commonjs2’,入口起点的返回值将使用output.library中定义的值，分配给exports对象，这个名称也意味着，模块将用于commonjs环境；
