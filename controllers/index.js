@@ -2,7 +2,7 @@
  * @Author: chenqu 
  * @Date: 2018-02-24 12:29:54 
  * @Last Modified by: chenqu
- * @Last Modified time: 2018-02-24 12:43:16
+ * @Last Modified time: 2018-03-12 20:19:01
  */
 const fs = require('fs');
 const router = require('koa-router')();
@@ -13,7 +13,7 @@ const readDirRecurison = (path) => {
             if (errStat) throw errStat;
             if (stats.isFile()) {
                 // console.log(`${path}/${item}`);
-                const controller = require(`${path}/${item}`);
+                const controller = require(`${path}/${item}`).default;
                 const {callback, url, method} = controller;
                 if (method.toLowerCase() === 'post') {
                     router.post(url, callback);

@@ -4,7 +4,7 @@
   "description": "node.js项目脚手架 ## 2018年2月七日",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --progress && cross-env NODE_ENV=development node ./scripts/dev.js",
+    "server": "webpack --progress && cross-env NODE_ENV=development node ./server/dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
